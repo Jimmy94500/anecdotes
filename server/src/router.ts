@@ -2,17 +2,11 @@ import express from "express";
 
 const router = express.Router();
 
-/* ************************************************************************* */
-// Define Your API Routes Here
-/* ************************************************************************* */
+// --- ANECDOTES --- //
 
-// Define item-related routes
-import itemActions from "./modules/item/itemActions";
-
-router.get("/api/items", itemActions.browse);
-router.get("/api/items/:id", itemActions.read);
-router.post("/api/items", itemActions.add);
-
-/* ************************************************************************* */
+import anecdotesActions from "./modules/anecdotes/anecdotesActions";
+router.post("/api/anecdotes/", anecdotesActions.add);
+router.get("/api/anecdotes", anecdotesActions.readAll);
+router.get("/api/anecdotes/:id", anecdotesActions.readOne);
 
 export default router;
