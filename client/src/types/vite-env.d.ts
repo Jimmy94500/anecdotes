@@ -3,6 +3,8 @@
 // See https://vite.dev/guide/features.html#client-types
 
 export type Anecdotes = {
+  anecdoteProps: Anecdotes;
+  key: number;
   id: number;
   title: string;
   content: string;

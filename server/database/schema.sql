@@ -26,6 +26,16 @@ INSERT INTO categories (name) VALUES
   ("Tech"),
   ("Boulot");
 
+INSERT INTO categories (id, name) VALUES
+(1, 'Famille'),
+(2, 'Transport'),
+(3, 'Boulot'),
+(4, 'Couple'),
+(5, 'Vie quotidienne'),
+(6, 'Souvenirs'),
+(7, 'Amitié')
+ON DUPLICATE KEY UPDATE name = VALUES(name);
+
 
 -- Table des anecdotes
 CREATE TABLE anecdotes (
@@ -42,25 +52,39 @@ CREATE TABLE anecdotes (
 
 INSERT INTO anecdotes (title, date, genre, content, user_id, category_id) VALUES
 (
-  "Le jour où j’ai failli effacer la base prod",
-  "2024-10-12",
-  "Tech",
-  "J’étais en train de faire un `DELETE FROM` en pensant être en local... sauf que non. Heureusement, j’ai bloqué à temps. Depuis, je vérifie 3 fois le terminal avant d’appuyer sur Entrée.",
-  1, 2
+  "Le bain improvisé",
+  "2024-07-10",
+  "Famille",
+  "Mon fils de 5 ans a rempli la baignoire tout seul pour ‘me faire plaisir’. L’eau débordait, il avait mis tous les gels douche, du shampoing, et un sachet de thé. J’étais tellement surpris que j’ai juste dit merci. J’ai pris le bain après lui, mousse violette et odeur de menthe poivrée comprise.",
+  1, 1
 ),
 (
-  "Une course poursuite avec un pigeon",
-  "2023-05-22",
-  "Vie urbaine",
-  "Je mangeais un kebab tranquille sur un banc quand un pigeon a tenté un braquage de sauce blanche. S’en est suivie une course-poursuite ridicule sur 20 mètres. Le pigeon a gagné.",
-  2, 1
+  "La discussion sur le trottoir",
+  "2024-06-22",
+  "Vie quotidienne",
+  "Je sortais les poubelles en chaussettes, pas coiffé, pas réveillé. Une vieille dame m’a arrêtée pour parler de la météo. Elle m’a raconté ses douleurs au genou, ses plantes et que son fils n’appelle plus. J’ai écouté 15 minutes. C’est la seule personne avec qui j’ai parlé ce jour-là.",
+  2, 5
 ),
 (
-  "Le jour où mon micro est resté allumé sur Zoom",
-  "2022-11-08",
-  "Boulot",
-  "J’ai critiqué mon boss pendant une visio... sauf que j’avais laissé mon micro allumé. Le silence gênant qui a suivi était plus violent qu’un plantage en prod.",
-  3, 3
+  "L’ami au mauvais moment",
+  "2024-05-09",
+  "Amitié",
+  "J’étais en train de pleurer dans ma voiture, garée dans un parking souterrain. Mon pote est passé pile à ce moment-là et m’a fait un doigt d’honneur par la vitre, en rigolant. Il ne savait pas que j’étais au fond du seau. Quand je lui ai dit plus tard, il m’a juste dit : 'j’étais sûr que t’avais besoin d’un sourire'.",
+  3, 7
+),
+(
+  "La lettre retrouvée",
+  "2024-07-01",
+  "Souvenirs",
+  "En rangeant un tiroir, j’ai retrouvé une lettre que j’avais écrite à mon moi du futur à 15 ans. Elle disait : ‘J’espère que t’as toujours pas oublié comment on fait des crêpes’. J’ai ri, j’ai pleuré un peu, puis j’ai fait des crêpes, sans recette.",
+  1, 1
+),
+(
+  "Silence dans le bus",
+  "2024-06-17",
+  "Transport",
+  "Un matin, dans le bus, un petit garçon a crié : ‘Maman ! Pourquoi le monsieur il est triste ?’. Je n’étais pas triste, juste fatigué. Mais personne n’a rien dit. Sa mère a répondu doucement : ‘Peut-être qu’il pense à quelque chose’. J’ai trouvé ça très juste. Et très beau.",
+  2, 2
 );
 
 
