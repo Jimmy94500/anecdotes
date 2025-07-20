@@ -1,12 +1,11 @@
 import "./App.css";
+import AnecdoteList from "./components/AnecdotesList";
 
 function App() {
   return (
-    <>
-      <div>
-        <h1> ANECTODES </h1>
-      </div>
-    </>
+    <div>
+      <AnecdoteList />
+    </div>
   );
 }
 
