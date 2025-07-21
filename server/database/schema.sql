@@ -21,11 +21,6 @@ CREATE TABLE categories (
   name VARCHAR(100) NOT NULL
 );
 
-INSERT INTO categories (name) VALUES
-  ("Vie urbaine"),
-  ("Tech"),
-  ("Boulot");
-
 INSERT INTO categories (id, name) VALUES
 (1, 'Famille'),
 (2, 'Transport'),

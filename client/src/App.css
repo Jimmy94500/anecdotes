@@ -1,5 +1,25 @@
+:root {
+  /* color */
+  --beige-color: #fcf2e1;
+  --white-color: #fafafa;
+  --green-color: #6ba292;
+  --blue-color: #082132;
+
+  /* typo */
+  --title-font: "Monda", sans-serif;
+  --font-weight-title: 400;
+  --text-font: "IBM Plex Sans", sans-serif;
+  --font-weight-text: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: var(--beige-color);
+  margin-left: 5%;
+  margin-right: 5%;
 }
