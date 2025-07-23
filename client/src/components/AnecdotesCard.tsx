@@ -1,4 +1,5 @@
 import type { Anecdotes } from "../types/vite-env";
+import "./AnecdoteCard.css";
 
 type AnecdoteCardProps = {
   anecdoteProps: Anecdotes;
@@ -6,10 +7,12 @@ type AnecdoteCardProps = {
 
 const AnecdoteCard = ({ anecdoteProps }: AnecdoteCardProps) => {
   return (
-    <div>
-      <h2>{anecdoteProps.title}</h2>
-      <p>{anecdoteProps.content}</p>
-    </div>
+    <article>
+      <div className="anecdoteCard">
+        <h2>{anecdoteProps.title}</h2>
+        <p>{anecdoteProps.content}</p>
+      </div>
+    </article>
   );
 };
 

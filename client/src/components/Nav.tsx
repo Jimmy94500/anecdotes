@@ -1,16 +1,21 @@
+import { Link } from "react-router";
 import "./Nav.css";
 function Nav() {
   return (
     <>
-      <div className="logo">
-        <h1>Raconte</h1>
-      </div>
-      <div className="navigation">
-        <h1>Anecdotes</h1>
-        <h1>Catégories</h1>
-        <h1>S'inscrire</h1>
-        <h1>Se connecter</h1>
-      </div>
+      <article className="nav">
+        <div className="logo">
+          <h1>Raconte 📖 </h1>
+        </div>
+        <div className="navigation">
+          <Link to={""} className="nav-link">
+            <h1>Se connecter</h1>
+          </Link>
+          <Link to={""} className="nav-link">
+            <h1>S'inscire</h1>
+          </Link>
+        </div>
+      </article>
     </>
   );
 }

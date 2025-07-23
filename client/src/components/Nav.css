@@ -1,3 +1,8 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .navigation {
   display: flex;
   justify-content: flex-end;
@@ -5,8 +10,16 @@
   gap: 20px;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3rem;
+}
 .logo {
   display: flex;
   justify-content: flex-start;
-  width: 15%;
+}
+
+.logo > h1 {
+  font-size: 2rem;
 }

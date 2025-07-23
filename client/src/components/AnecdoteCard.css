@@ -1,0 +1,7 @@
+.anecdoteCard {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}

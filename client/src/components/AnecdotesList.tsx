@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Anecdotes } from "../types/vite-env";
 import AnecdoteCard from "./AnecdotesCard";
+import "./AnecdotesList.css";
 
 function AnecdoteList() {
   const [anecdotesData, setAnecdotesData] = useState([]);
@@ -14,11 +15,11 @@ function AnecdoteList() {
   }, []);
 
   return (
-    <div>
+    <section className="listAnecdotes">
       {anecdotesData.map((anecdote: Anecdotes) => (
         <AnecdoteCard key={anecdote.id} anecdoteProps={anecdote} />
       ))}
-    </div>
+    </section>
   );
 }
 
