@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .navigation {
@@ -11,11 +12,15 @@
 }
 
 .nav-link {
+  font-family: var(--text-font);
+  font-weight: var(--font-weight-textNav);
   text-decoration: none;
   color: inherit;
   font-size: 1.3rem;
 }
 .logo {
+  font-family: var(--logo-font);
+  font-weight: var(--font-weight-logo);
   display: flex;
   justify-content: flex-start;
 }

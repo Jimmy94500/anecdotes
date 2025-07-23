@@ -3,6 +3,10 @@
 // See https://vite.dev/guide/features.html#client-types
 
 export type Anecdotes = {
+  profilPicture: string;
+  genre: string;
+  created_at: string;
+  pseudo: string;
   anecdoteProps: Anecdotes;
   key: number;
   id: number;

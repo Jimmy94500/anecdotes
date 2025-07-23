@@ -6,10 +6,15 @@
   --blue-color: #082132;
 
   /* typo */
-  --title-font: "Monda", sans-serif;
-  --font-weight-title: 400;
-  --text-font: "IBM Plex Sans", sans-serif;
+  --title-font: "EB Garamond", sans-serif;
+  --font-weight-title: 800;
+  --text-font: "Karla", sans-serif;
   --font-weight-text: 400;
+  --font-weight-textNav: 200;
+  --pseudo-font: "Dancing Script", sans-serif;
+  --font-weight-pseudo: 800;
+  --logo-font: "Gloock", sans-serif;
+  --font-weight-logo: 800;
 }
 
 * {

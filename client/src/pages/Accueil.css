@@ -1,4 +1,4 @@
-.interactionPage {
+/* .interactionPage {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -38,4 +38,74 @@
   color: var(--white-color);
   border-radius: 10px;
   cursor: pointer;
+} */
+.interactionPage {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btnPostAnecdote {
+  font-family: var(--text-font);
+
+  background-color: var(--green-color);
+  color: var(--white-color);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btnPostAnecdote:hover {
+  background-color: #599d8f;
+}
+
+.filtre {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Catégories (texte ou bouton) */
+.btnCateg {
+  font-family: var(--text-font);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Searchbar */
+.searchbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--green-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.searchbar input[type="search"] {
+  border: none;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: var(--white-color);
+  font-size: 0.9rem;
+  width: 200px;
+}
+
+.searchbar input::placeholder {
+  font-family: var(--text-font);
+  color: var(--white-color);
 }

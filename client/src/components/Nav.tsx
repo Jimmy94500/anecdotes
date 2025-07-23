@@ -12,7 +12,7 @@ function Nav() {
             <h1>Se connecter</h1>
           </Link>
           <Link to={""} className="nav-link">
-            <h1>S'inscire</h1>
+            <h1>S'inscrire</h1>
           </Link>
         </div>
       </article>

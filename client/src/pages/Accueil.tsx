@@ -17,9 +17,8 @@ function Accueil() {
               className="searchbar"
               type="search"
               name="q"
-              placeholder="Recherchez ce que tu veux..."
+              placeholder="un mot, une lettre ..."
             />
-            <button type="submit">🔍</button>
           </form>
         </div>
       </article>
