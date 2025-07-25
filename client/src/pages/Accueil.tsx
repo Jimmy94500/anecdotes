@@ -24,7 +24,7 @@ function Accueil() {
           Poste ton anecdote
         </button>
         <h2>{user?.pseudo}</h2>
-        <img src={user?.profilPicture} alt="profilPictureUser" />
+        {user && <img src={user.profilPicture} alt="profilPictureUser" />}
         <div className="filtre">
           <button type="button" className="btnCateg">
             Catégories

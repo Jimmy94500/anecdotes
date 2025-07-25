@@ -18,6 +18,8 @@
 }
 
 .postPage textarea {
+  font-family: var(--text-font);
+
   width: 100%;
   min-height: 100px;
   border-radius: 4px;
