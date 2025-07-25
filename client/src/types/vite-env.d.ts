@@ -13,3 +13,11 @@ export type Anecdotes = {
   title: string;
   content: string;
 };
+
+export type User = {
+  id: number;
+  pseudo: string;
+  email: string;
+  password: string;
+  profilPicture: string;
+};

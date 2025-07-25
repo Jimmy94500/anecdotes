@@ -6,6 +6,7 @@ CREATE TABLE users (
   id INT PRIMARY KEY AUTO_INCREMENT,
   pseudo VARCHAR(100) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(100),
   profilPicture TEXT
 );
 
@@ -39,15 +40,13 @@ CREATE TABLE anecdotes (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   genre VARCHAR(100),
   content TEXT NOT NULL,
-  user_id INT NOT NULL,
+  user_id INT,
   category_id INT NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE CASCADE
 );
 
 INSERT INTO anecdotes (title, genre, content, user_id, category_id) VALUES
-  ("Le bain improvisé", "Famille",
-  "Mon fils de 5 ans a rempli la baignoire tout seul pour ‘me faire plaisir’. L’eau débordait, il avait mis tous les gels douche, du shampoing, et un sachet de thé. J’étais tellement surpris que j’ai juste dit merci. J’ai pris le bain après lui, mousse violette et odeur de menthe poivrée comprise.", 1, 1),
 
   ("La discussion sur le trottoir", "Vie quotidienne",
   "Je sortais les poubelles en chaussettes, pas coiffé, pas réveillé. Une vieille dame m’a arrêtée pour parler de la météo. Elle m’a raconté ses douleurs au genou, ses plantes et que son fils n’appelle plus. J’ai écouté 15 minutes. C’est la seule personne avec qui j’ai parlé ce jour-là.", 2, 5),
@@ -57,6 +56,8 @@ INSERT INTO anecdotes (title, genre, content, user_id, category_id) VALUES
 
   ("La lettre retrouvée", "Souvenirs",
   "En rangeant un tiroir, j’ai retrouvé une lettre que j’avais écrite à mon moi du futur à 15 ans. Elle disait : ‘J’espère que t’as toujours pas oublié comment on fait des crêpes’. J’ai ri, j’ai pleuré un peu, puis j’ai fait des crêpes, sans recette.", 4, 1),
+  ("Le bain improvisé", "Famille",
+  "Mon fils de 5 ans a rempli la baignoire tout seul pour ‘me faire plaisir’. L’eau débordait, il avait mis tous les gels douche, du shampoing, et un sachet de thé. J’étais tellement surpris que j’ai juste dit merci. J’ai pris le bain après lui, mousse violette et odeur de menthe poivrée comprise.", 1, 1),
 
   ("Silence dans le bus", "Transport",
   "Un matin, dans le bus, un petit garçon a crié : ‘Maman ! Pourquoi le monsieur il est triste ?’. Je n’étais pas triste, juste fatigué. Mais personne n’a rien dit. Sa mère a répondu doucement : ‘Peut-être qu’il pense à quelque chose’. J’ai trouvé ça très juste. Et très beau.", 5, 2);

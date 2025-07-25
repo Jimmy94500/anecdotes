@@ -47,6 +47,10 @@
   padding: 2rem 1.5rem;
   flex-wrap: wrap;
   gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--beige-color);
 }
 
 .btnPostAnecdote {
@@ -61,11 +65,14 @@
   font-size: 1.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  z-index: 40;
+
   transition: background-color 0.2s ease-in-out;
 }
 
 .btnPostAnecdote:hover {
   background-color: #599d8f;
+  z-index: 30;
 }
 
 .filtre {

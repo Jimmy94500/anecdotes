@@ -1,0 +1,21 @@
+.searchbar {
+  display: flex;
+  align-items: center;
+  background-color: var(--green-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.searchbar input[type="search"] {
+  border: none;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: var(--white-color);
+  font-size: 0.9rem;
+  width: 200px;
+}
+
+.searchbar input::placeholder {
+  font-family: var(--text-font);
+  color: var(--white-color);
+}

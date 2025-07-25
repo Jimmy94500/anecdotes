@@ -7,7 +7,7 @@
 
   /* typo */
   --title-font: "EB Garamond", sans-serif;
-  --font-weight-title: 800;
+  --font-weight-title: 400;
   --text-font: "Karla", sans-serif;
   --font-weight-text: 400;
   --font-weight-textNav: 200;
@@ -27,4 +27,7 @@ body {
   background-color: var(--beige-color);
   margin-left: 5%;
   margin-right: 5%;
+}
+.Toastify__toast {
+  font-size: 1.2rem; /* si tu veux rendre le texte plus lisible */
 }

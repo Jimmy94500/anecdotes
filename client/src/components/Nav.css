@@ -23,6 +23,8 @@
   font-weight: var(--font-weight-logo);
   display: flex;
   justify-content: flex-start;
+  color: inherit;
+  text-decoration: none;
 }
 
 .logo > h1 {

@@ -28,7 +28,8 @@ const readAll: RequestHandler = async (req, res, next) => {
 
 const add: RequestHandler = async (req, res, next) => {
   try {
-    const result = await anecdotesRepository.create(req.body);
+    const newAnecdote = req.body;
+    const result = await anecdotesRepository.create(newAnecdote);
 
     if (result != null) {
       res.status(201).json(result);
@@ -40,8 +41,27 @@ const add: RequestHandler = async (req, res, next) => {
   }
 };
 
+const destroy: RequestHandler = async (req, res, next) => {
+  try {
+    const parseId = Number.parseInt(req.params.id);
+    const result = await anecdotesRepository.deleteById(parseId);
+    if (result.affectedRows > 0) {
+      res.sendStatus(204);
+    } else {
+      res
+        .status(404)
+        .json(
+          "La supression n'a pas pu être prise en compte, aucune ligne affectée",
+        );
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 export default {
   add,
   readOne,
   readAll,
+  destroy,
 };

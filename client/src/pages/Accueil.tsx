@@ -1,25 +1,34 @@
+import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
 import AnecdoteList from "../components/AnecdotesList";
+import { useUser } from "../context/user.context";
 import "./Accueil.css";
 
 function Accueil() {
+  const { user } = useUser();
+  // LE USECONTEXT DU CONTEXT ANECDOTES
+  const navigate = useNavigate();
+
   return (
     <>
       <article className="interactionPage">
-        <button type="button" className="btnPostAnecdote">
+        <button
+          onClick={() => {
+            if (user) navigate("/PostAnecdote");
+            else
+              toast.warning("Tu dois être connecté pour poster une anecdote !");
+          }}
+          type="button"
+          className="btnPostAnecdote"
+        >
           Poste ton anecdote
         </button>
+        <h2>{user?.pseudo}</h2>
+        <img src={user?.profilPicture} alt="profilPictureUser" />
         <div className="filtre">
           <button type="button" className="btnCateg">
             Catégories
           </button>
-          <form className="searchbar" action="/recherche" method="get">
-            <input
-              className="searchbar"
-              type="search"
-              name="q"
-              placeholder="un mot, une lettre ..."
-            />
-          </form>
         </div>
       </article>
       <main>

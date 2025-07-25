@@ -8,6 +8,8 @@ import App from "./App";
 
 // Import the main app component
 import Accueil from "./pages/Accueil";
+import Inscription from "./pages/Inscription";
+import SeConnecter from "./pages/SeConnecter";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -16,6 +18,10 @@ import Accueil from "./pages/Accueil";
 // import Contact from "./pages/Contact";
 
 /* ************************************************************************* */
+
+import { AnecdoteProvider } from "./context/AnecdoteContext";
+import { UserProvider } from "./context/user.context";
+import PostAnecdote from "./pages/PostAnecdote";
 
 // Create router configuration with routes
 // You can add more routes as you build out your app!
@@ -26,6 +32,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Accueil />,
+      },
+      {
+        path: "/inscription",
+        element: <Inscription />,
+      },
+      {
+        path: "/seconnecter",
+        element: <SeConnecter />,
+      },
+      {
+        path: "/postAnecdote",
+        element: <PostAnecdote />,
       },
     ],
   },
@@ -43,7 +61,11 @@ if (rootElement == null) {
 // Render the app inside the root element
 createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AnecdoteProvider>
+      <UserProvider>
+        <RouterProvider router={router} />
+      </UserProvider>
+    </AnecdoteProvider>
   </StrictMode>,
 );
 
